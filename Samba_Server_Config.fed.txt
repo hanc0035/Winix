@@ -1,0 +1,93 @@
+# Centos 7 Samba (SMB) File Server
+# Operating System: CentOS 7 64-bit
+# Purpose: to create a basic template for deploying a basic Samba file sharing server.
+
+# By Brendan Marentette
+# mare0034@algonquinlive.com
+# Created: 2020-06-02
+# Last Update: 2020-09-23
+
+# update and upgrade installed packages
+yum update
+yum upgrade
+
+# install packages required by Samba
+yum install samba samba-common-bin samba-client
+
+# optional: needed for mounting cfs file system type on Linux
+yum install cifs-utils
+
+# optional: needed for mounting NTFS file system type on Linux
+sudo apt-get install ntfs-3g
+
+# create backup original conf file
+cp /etc/samba/smb.conf /etc/samba/smb.conf.backup
+
+# edit samba config file to add share
+# sudo vim /etc/samba/smb.conf
+
+# add share information
+# [MyShare]
+# path = /home/pi/shared
+# writeable=Yes
+# create mask=0777
+# directory mask=0777
+# public=no
+
+# create share folder
+mkdir /home/pi/shared
+
+# find HDD UUID/dev location
+fdisk -l
+
+# edit fstab file
+sudo vim /etc/fstab
+
+# add version of following entry to the file
+# /dev/sdb1    /home/pi/shared    ext4    defaults    0    0
+sudo mount /home/pi/shared
+
+# create samba user
+# user must exist, but password for Samba will need to be new
+# sudo smbpasswd -a pi
+
+# restart samba service
+sudo systemctl enable smb
+sudo systemctl restart smb
+
+# set firewall to allow samba traffic (for UFW firewall)
+sudo ufw allow samba
+
+# connect to remote samba share
+smbclient //192.168.0.5/share_file –U username
+sudo mount -t cifs //172.16.30.58/public /mnt/public -o user=cst8213,pass=cst8213
+
+# add fstab entry for share
+# sudo vim /etc/fstab
+
+# add a line like below
+# //<IP address of server>/<shared folder>	/<mount point>		cifs	guest,_netdev,uid=<your user name on Linux box> 0 0
+# example: //192.168.2.100/share	/mnt/oneterra		cifs	guest,_netdev,uid=mike 0 0
+# echo '//TS-P1/TS-P1-1	/home/marentette/MyShares		cifs	user=rhubarb,pass=[password]  0 0'>>/etc/fstab
+
+# mount -t cifs //TS-P1/TS-P1-1 -o rhubarb
+# smbclient //172.16.30.58/cst8213 -U cst8213
+
+# list shares on machine
+smbstatus --shares
+smbclient -L 172.16.30.58 # server IP
+
+# VERIFICATION:
+
+# view connected machines
+smbstatus --shares
+
+# EXTRA: important files, utilities, etc:
+# /etc/samba/smb.conf - Samba configuration file
+# o smbd - Samba file & print services daemon
+# o smb – service name
+# o testparm - to test Samba configuration directives
+# o smbpasswd - used to set/change SMB passwords
+# o pdbedit - used to set/change SMB passwords
+# o smbclient - FTP-like client for viewing and accessing Samba shares
+# o smbstatus – list of Samba connections
