@@ -1,6 +1,6 @@
 # Assignment 1
-##Project Initialization, Planning and Communication
-###Completed for CST8248 by Team Winix
+## Project Initialization, Planning and Communication
+### Completed for CST8248 by Team Winix
 
 ##### Team members;
 Brendan Marentette
@@ -9,6 +9,7 @@ Nicholas Hancin
 
 ##### Project Timeline
 Start Date: September 25th, 2020
+
 End Date: December 11, 2020
 
 ##### Task Assignment Table
