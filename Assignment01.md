@@ -4,7 +4,9 @@
 
 #### Team members;
 Brendan Marentette
+
 Kolawole Adamo
+
 Nicholas Hancin
 
 #### Project Timeline
