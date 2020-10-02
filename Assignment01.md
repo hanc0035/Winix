@@ -15,9 +15,11 @@ Start Date: September 25th, 2020
 End Date: December 11, 2020
 
 #### Task Assignment Table
-Link Table
+
+![Table1](https://onedrive.live.com/?authkey=%21AM3H4VVr43b8mzU&cid=C39187F64DEE7207&id=C39187F64DEE7207%2147283&parId=C39187F64DEE7207%2147005&o=OneUp)
 
 #### Gantt Chart
+
 Link Chart
 
 #### Communications Plan
