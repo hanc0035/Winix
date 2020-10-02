@@ -16,11 +16,11 @@ End Date: December 11, 2020
 
 #### Task Assignment Table
 
-![Table1](D:\Algonquin College\GitHub\Table1.PNG)
+![Table1](/D:\Algonquin College\GitHub\Table1.PNG)
 
 #### Gantt Chart
 
-![Gantt Chart](D:\Algonquin College\GitHub\Gantt.PNG)
+![Gantt Chart](/D:\Algonquin College\GitHub\Gantt.PNG)
 
 #### Communications Plan
   - Meetings will occur on a regular basis in order to monitor the progress of the upcoming deliverables for the project. 
