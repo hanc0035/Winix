@@ -1,6 +1,10 @@
 Assignment 1 – Project Initialization and Planning and Communication
 Completed for CST8248 by Team Winix
-Document and contents by Brendan Marentette; member assignment by all
+
+Team Members:
+Brendan Marentette
+Kolawole Adamo
+Nicholas Hancin
 
 Project Timeline:
 
