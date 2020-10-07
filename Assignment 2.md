@@ -49,7 +49,7 @@ practice will be to deactivate the interface.
 | ns1.winix.lab      | Master DNS        | 172.30.80.1            | 172.20.80.1             |
 | ns2.winix.lab      | Slave DNS         | 172.30.80.2            | 172.20.80.2             |
 | fserver.winix.lab  | Samba Server      | 172.30.80.3            | 172.20.80.3             |
-| webserve.winix.lab | HTTP/HTTPS Server | 172.30.80.4            | 172.20.80.3             |
+| webserve.winix.lab | HTTP/HTTPS Server | 172.30.80.4            | 172.20.80.4             |
 | lclient.winix.lab  | Linux Client      | 172.30.80.253          | 172.20.80.253           |
 | wclient.winix.lab  | Windows Client    | 172.30.80.254          | 172.20.80.254           |
 |                    |                   |                        |                         |
