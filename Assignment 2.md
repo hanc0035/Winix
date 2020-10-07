@@ -20,22 +20,22 @@ required to ensure that ongoing maintanence is can be completed efficiently and 
 
 ### Hardware Plan:
 
-| Hostname           | CPU (GHz) | RAM (GB) | Network Interfaces | Storage Capacity (GB) | Other              |
-|--------------------|-----------|----------|--------------------|-----------------------|--------------------|
-| ns1.winix.lab      | 2         | 4        | Red, Blue          | 20                    |                    |
-| ns2.winix.lab      | 1         | 2        | Red, Blue          | 10                    |                    |
-| fserver.winix.lab  | 1         | 3        | Red, Blue          | 20                    | Share Drive: 20 GB |
-| webserve.winix.lab | 1         | 3        | Red, Blue          | 10                    |                    |
-| lclient.winix.lab  | 1         | 2        | Red, Blue          | 15                    |                    |
-| wclient.winix.lab  | 1         | 2        | Red, Blue          | 15                    |                    |
-|                    |           |          |                    |                       |                    |
-|                    |           |          |                    |                       |                    |
-|                    |           |          |                    |                       |                    |
-|                    |           |          |                    |                       |                    |
-|                    |           |          |                    |                       |                    |
-|                    |           |          |                    |                       |                    |
-|                    |           |          |                    |                       |                    |
-|                    |           |          |                    |                       |                    |
+| Hostname           | CPU (# sockets; # cores) | RAM (GB) | Network Interfaces | Storage Capacity (GB) | Other              |
+|--------------------|--------------------------|----------|--------------------|-----------------------|--------------------|
+| ns1.winix.lab      | 2; 2                     | 4        | Red, Blue          | 20                    |                    |
+| ns2.winix.lab      | 1; 2                     | 2        | Red, Blue          | 10                    |                    |
+| fserver.winix.lab  | 1; 2                     | 3        | Red, Blue          | 20                    | Share Drive: 20 GB |
+| webserve.winix.lab | 1; 2                     | 3        | Red, Blue          | 10                    |                    |
+| lclient.winix.lab  | 1; 2                     | 2        | Red, Blue          | 15                    |                    |
+| wclient.winix.lab  | 2; 2                     | 6        | Red, Blue          | 15                    |                    |
+|                    |                          |          |                    |                       |                    |
+|                    |                          |          |                    |                       |                    |
+|                    |                          |          |                    |                       |                    |
+|                    |                          |          |                    |                       |                    |
+|                    |                          |          |                    |                       |                    |
+|                    |                          |          |                    |                       |                    |
+|                    |                          |          |                    |                       |                    |
+|                    |                          |          |                    |                       |                    |
 
 ### Networking Plan:
 
