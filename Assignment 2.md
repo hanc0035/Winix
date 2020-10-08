@@ -28,14 +28,7 @@ required to ensure that ongoing maintanence is can be completed efficiently and 
 | webserve.winix.lab | 1; 2                     | 3        | Red, Blue          | 10                    |                    |
 | lclient.winix.lab  | 1; 2                     | 2        | Red, Blue          | 15                    |                    |
 | wclient.winix.lab  | 2; 2                     | 6        | Red, Blue          | 15                    |                    |
-|                    |                          |          |                    |                       |                    |
-|                    |                          |          |                    |                       |                    |
-|                    |                          |          |                    |                       |                    |
-|                    |                          |          |                    |                       |                    |
-|                    |                          |          |                    |                       |                    |
-|                    |                          |          |                    |                       |                    |
-|                    |                          |          |                    |                       |                    |
-|                    |                          |          |                    |                       |                    |
+
 
 ### Networking Plan:
 
@@ -52,11 +45,6 @@ practice will be to deactivate the interface.
 | webserve.winix.lab | HTTP/HTTPS Server | 172.30.80.5            | 172.20.80.5             |
 | lclient.winix.lab  | Linux Client      | 172.30.80.253          | 172.20.80.253           |
 | wclient.winix.lab  | Windows Client    | 172.30.80.254          | 172.20.80.254           |
-|                    |                   |                        |                         |
-|                    |                   |                        |                         |
-|                    |                   |                        |                         |
-|                    |                   |                        |                         |
-|                    |                   |                        |                         |
 
 
 ### Test Plan:
@@ -77,8 +65,4 @@ a service should be documented for future reference and to aid with troubleshoot
 |                 |                         |                     | Spiceworks           |              |        |                                                                                                         |           |
 | iSCSI initiator | iSCSI target            |                     | iSCSI                |              |        |                                                                                                         |           |
 |                 |                         |                     | PostGreSQL           |              |        |                                                                                                         |           |
-|                 |                         |                     |                      |              |        |                                                                                                         |           |
-|                 |                         |                     |                      |              |        |                                                                                                         |           |
-|                 |                         |                     |                      |              |        |                                                                                                         |           |
-|                 |                         |                     |                      |              |        |                                                                                                         |           |
-|                 |                         |                     |                      |              |        |                                                                                                         |           |
+
