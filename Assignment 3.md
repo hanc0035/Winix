@@ -47,7 +47,10 @@ As of the time of this assignment submission, no elements are overdue.
 
 
 7) Reflect upon your communications plan. Was it adequate thus far? Detail any changes you have made?
-
+The communication plan has proven to be effective. Each of the weekly team meetings have been completed and the meeting minutes have
+been posted in an accessible Microsoft OneDrive folder as planned (for future reference). So far the only change made to the proposed
+schedule was to change the date of one of the meetings due to a timing conflict. This created no problems, since the meeting was 
+rescheduled for the following day. As of today, there are no proposed changes to the communication plan and none are anticipated.
 
 
 8) Examine your hardware plan. Is the hardware allocated to each virtual machine appropriate? Take this opportunity to right-size your virtual machines?
