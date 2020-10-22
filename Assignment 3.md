@@ -10,6 +10,7 @@ Kolawole Adamo
 Nicholas Hancin
 
 
+
 1) Which project elements are on track?
 
 The DNS Servers and file server are on track. Both were completed according to their respective deadlines. The file server
@@ -53,7 +54,9 @@ schedule was to change the date of one of the meetings due to a timing conflict.
 rescheduled for the following day. As of today, there are no proposed changes to the communication plan and none are anticipated.
 
 
+
 8) Examine your hardware plan. Is the hardware allocated to each virtual machine appropriate? Take this opportunity to right-size your virtual machines?
+
 
 
 
@@ -61,10 +64,14 @@ rescheduled for the following day. As of today, there are no proposed changes to
 
 
 
+
 10) Update your test plan for any completed services or features. Include your updated test plan in this document.
 
 
 
+
 11) Are there any potential hurdles that your team can foresee at this point in the project?
+
+
 
 
