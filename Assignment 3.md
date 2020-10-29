@@ -66,7 +66,9 @@ rescheduled for the following day. As of today, there are no proposed changes to
 
 ### 9) Examine your network plan. Is your network plan adequate?
 
-A few more services are still in need of planning. As they are added to the servers they will be planned out and added to the topology map and the network plan.
+Some services have not been implemented yet, so they have been omitted from the topology diagram below. The network plan (as seen in the table at the bottom
+of this document) has proven to be adequate. The only anticipated change is that we will likely phase out the Red Network as per the instructions Denis
+outlined during his lecture on October 23, 2020.
 
 ![Topology](https://github.com/hanc0035/Winix/blob/master/Winix%20Topology.png)
 
