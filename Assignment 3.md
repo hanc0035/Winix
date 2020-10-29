@@ -63,7 +63,9 @@ rescheduled for the following day. As of today, there are no proposed changes to
 
 ### 9) Examine your network plan. Is your network plan adequate?
 
+A few more services are still in need of planning. As they are added to the servers they will be planned out and added to the topology map and the network plan.
 
+![Topology](https://github.com/hanc0035/Winix/blob/master/Winix%20Topology.png)
 
 
 ### 10) Update your test plan for any completed services or features. Include your updated test plan in this document.
