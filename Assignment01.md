@@ -16,7 +16,7 @@ End Date: December 11, 2020
 
 #### Task Assignment Table
 
-  ![Table1](D:\Algonquin College\GitHub\Assignment1Table.png)
+  ![Table1](Table1.png)
 
 #### Gantt Chart
 
