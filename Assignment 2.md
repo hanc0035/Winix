@@ -46,6 +46,7 @@ practice will be to deactivate the interface.
 | lclient.winix.lab  | Linux Client      | 172.30.80.253          | 172.20.80.253           |
 | wclient.winix.lab  | Windows Client    | 172.30.80.254          | 172.20.80.254           |
 
+![Topology](https://github.com/hanc0035/Winix/blob/master/Winix%20Topology.png)
 
 ### Test Plan:
 
