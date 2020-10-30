@@ -75,7 +75,7 @@ outlined during his lecture on October 23, 2020.
 
 ### 10) Update your test plan for any completed services or features. Include your updated test plan in this document.
 
-Most services are not completed but in progress while conducting the configuration test plan. Formal testing of each of the services will be completed and 
+Most services are yet to be added and completed while conducting the configuration test plan, and are all right on schedule. Formal testing of each of the services will be completed and 
 documented at a later date.
 
 
