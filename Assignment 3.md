@@ -61,7 +61,7 @@ rescheduled for the following day. As of today, there are no proposed changes to
 
 ### 8) Examine your hardware plan. Is the hardware allocated to each virtual machine appropriate? Take this opportunity to right-size your virtual machines?
 
-All hardware are seen to be allocated to virtual machines correctly. If there be any changes needed in future references, it will be updated.
+All hardware are seen to be allocated to virtual machines correctly. If any changes are needed in the future, they will be updated here.
 
 
 ### 9) Examine your network plan. Is your network plan adequate?
