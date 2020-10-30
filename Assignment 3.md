@@ -61,7 +61,7 @@ rescheduled for the following day. As of today, there are no proposed changes to
 
 ### 8) Examine your hardware plan. Is the hardware allocated to each virtual machine appropriate? Take this opportunity to right-size your virtual machines?
 
-
+All hardware are seen to be allocated to virtual machines correctly. If there be any changes needed in future references, will be updated.
 
 
 ### 9) Examine your network plan. Is your network plan adequate?
@@ -75,7 +75,7 @@ outlined during his lecture on October 23, 2020.
 
 ### 10) Update your test plan for any completed services or features. Include your updated test plan in this document.
 
-
+Most services are not completed but in progress while conducting the configuration test plan. The ADDS is installed 
 
 
 ### 11) Are there any potential hurdles that your team can foresee at this point in the project?
