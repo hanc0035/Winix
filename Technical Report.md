@@ -82,6 +82,11 @@ Consider the purpose of your document while writing the executive summary
 
 ### Introduction: 
 
+The project presented for your consideration includes a variety of services that are intended to provide a comprehensive set of Information Technology (IT)
+resources for an office owned by the client, Winix Labratories Inc. The services available on the network include: DNS, Samba, NTP, iSCSI, Veeam, Spiceworks,
+and some cloud services hosted in Microsoft Azure. The overall design of the deliverables and their individuals configurations are intended to optimize the 
+VMs to be easy to maintain and simple to reconfigure and alter as desired. As a result, 
+
 Intro will include the following: 
 
 Introduce the document 
@@ -106,7 +111,7 @@ Scope of the project
 
 This document is intended to be read by the Computer System Technicians (CSTs) working for our client, Winix Laboratories Inc. The document will describe configuration decisions and other details that are intended to assist the CSTs with maintaining the services.  
 
-For most of the services, individual servers are configured to perform specific tasks, such as the SMB file server on machine fileserve.winix.lab. Service stacking is limiting to the Spiceworks, DNS and Veeam services for reasons described later in this document. The use of individual systems tasked with one service is intended to minimize the complexity of server maintenance and facilitate easier backups and restores. This “modular” service design also aids in the creation of additional secondary or tertiary services as needed. Some of the critical services, such as ADDS, DNS and NTP already have secondary servers that can be used in the event of a failure on the primary systems. Supplementary information about the software and hardware configuration of the services and servers can be found in the Progress Log included in this document (refer to Appendix 1).
+For most of the services, individual servers are configured to perform specific tasks, such as the SMB file server on machine fileserve.winix.lab. Service stacking is limiting to the Spiceworks, DNS and Veeam services for reasons described later in this document. The use of individual systems tasked with one service is intended to minimize the complexity of server maintenance and facilitate easier backups and restores. This “modular” service design also aids in the creation of additional secondary or tertiary services as needed. Some of the critical services, such as ADDS, DNS and NTP already have secondary servers that can be used in the event of a failure on the primary systems. Supplementary information about the software and hardware configuration of the services and servers can be found in the Progress Log included in this document (refer to Appendix 1). In addition, a sample of our Testing Plan is included in Appendix 2.
 
 
 ### Discussion 
@@ -137,6 +142,34 @@ One describing any specific config decisions we made and why (eg. Why I used MD5
 
  
 ***
+
+#### Active Directory
+
+
+
+#### DNS
+The primary and secondary DNS servers were originally configured on CentOS using the Named DNS service. However, it was later determined that
+the service should be implemented on a Windows Server in order to ensure that the configuration would be compatible with the services that were
+installed later (such as Spiceworks). As a result, the final version of the DNS servers are running on the primary and secondary Domain Controllers.
+As a result, the DNS service is perfectly compatible with all services and will be easy to maintain by the client. In its current state, the DNS
+servers function in a master/slave relationship between DC01 and DC02. This configuration was set up in order to ensure that the DNS service is 
+fault tolerant in the event of DC01 experiencing a failure.
+
+
+#### Firewalls
+The host-based firewalls in use on the network are differentiated between the Operating Systems in use: Windows Server 2016/2019 and CentOS 7. The Windows
+Server firewall rules are configured using the Windows Firewall utility. The firewall rules are configured to permit the establishment of
+connections that are necessary for the server to work effectively, while also denying any traffic that does not need to be permitted to connect
+with the server. For example, the DNS server is configured to allow DNS queries and RDP traffic on the local subnet, but does not permit any 
+uneeded traffic because our firewall policy makes use of a defined "deny all" rule in order to disallow unnecessary connections or traffic.
+The firewall service in use on the Linux machines is IPTables. This service was chosen because the servers required a stateful firewall 
+configuration in order to provide the desired level of protection. The IPTables rules on the machines are similar across all of the CentOS 
+servers, with the main difference being the specific port connections that are permitted. For example, all servers are set up to permit
+HTTP and DNS traffic (which are needed for Spiceworks to function) and all of the servers have an explicit "deny all" statement for inbound
+and outbound connections that aren't specified in the rules. Refer to Appendix 3 to see an example of a firewall configuration that is in 
+use on one of the virtual machines.
+
+
 #### NTP
 The NTP service was configured on ntp.winix.lab. This service was chosen as one of the value added deliverables for the project
 in order to ensure effective time synchronization between all of the servers on the back end network. NTP was configured on a 
@@ -163,32 +196,7 @@ use is CentOS 7 and the file system software is Samba (running as the daemon "sm
 because of the ease of hardening and open source roots. The server is configured to use the Domain accounts for authorization and 
 authentication. This design decision was made in order to maximize the simplicity and security of the service and minimize the need to have
 separate Samba login information for each user that requires access to the file server. The file share is accessible on the Blue network
-at \\fileserve.winix.lab\WinixFiles.
-
-
-#### Firewalls
-The firewalls in use on the network are differentiated between the Operating Systems in use: Windows Server 2016/2019 and CentOS 7. The Windows
-Server firewall rules are configured using the Windows Firewall utility. The firewall rules are configured to permit the establishment of
-connections that are necessary for the server to work effectively, while also denying any traffic that does not need to be permitted to connect
-with the server. For example, the DNS server is configured to allow DNS queries and RDP traffic on the local subnet, but does not permit any 
-uneeded traffic because our firewall policy makes use of a defined "deny all" rule in order to disallow unnecessary connections or traffic.
-The firewall service in use on the Linux machines is IPTables. This service was chosen because the servers required a stateful firewall 
-configuration in order to provide the desired level of protection. The IPTables rules on the machines are similar across all of the CentOS 
-servers, with the main difference being the specific port connections that are permitted. For example, all servers are set up to permit
-HTTP and DNS traffic (which are needed for Spiceworks to function) and all of the servers have an explicit "deny all" statement for inbound
-and outbound connections that aren't specified in the rules. Refer to Appendix 2 to see an example of a firewall configuration that is in 
-use on one of the virtual machines.
-
-
-#### Active Directory
-
-
-
-#### DNS
-
-
-
-#### Firewalls
+at \\\fileserve.winix.lab\WinixFiles.
 
 
 
@@ -197,10 +205,6 @@ use on one of the virtual machines.
 
 
 #### iSCSI
-
-
-
-#### Firewalls
  
 
 
@@ -269,8 +273,27 @@ We probably won’t have much info to include here, so we should copy/paste our 
 | sql\.winix\.lab       | In Progress | Not Started | 11/11/2020           | 11/30/2020         | Nicholas                  | Ubuntu 18           | Azure SQL                                                     | 0           | 0                    | 0           | 0          |                  | 172\.20\.80\.37  | public ip 13\.90\.78\.8 \(for ssh connection\)                                 |
 | azure webserver       | Complete    | Complete    | 11/11/2020           | 11/30/2020         | Nicholas                  | Ubuntu 18           | Azure Web Server                                              | 0           | 0                    | 0           | 0          |                  | 172\.20\.80\.36  | public ip 104\.211\.0\.91 \(for ssh connection\)                               |
 
+#### Appendix 2) Testing Plan Sample
 
-#### Appendix 2) Sample Firewall Configuration
+| Assigned to | Pass or Fail | Date Test Completed | Source                | Destination                               | Ping Successful | Service    | Test Parameters                                                                                                       | Expected Result                                       | Actual Result | Image File / Proof          |
+|-------------|--------------|---------------------|-----------------------|-------------------------------------------|-----------------|------------|-----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|---------------|-----------------------------|
+| Brendan     | Pass         | 11/9/2020           | ntp\.winix\.lab       | N/A                                       | N/A             | NTP        | enter “systemctl status ntpd” in terminal to check status of service                                                  | Running, enabled, synced with servers                 | As expected   | CST8248 NTP %1\.PNG         |
+| Brendan     | Pass         | 11/9/2020           | lclient\.winix\.lab   | ntp\.winix\.lab                           | Yes             | NTP        | run “ntpq \-p” command to check sync status; run “timedatectl” to verify “NTP enabled” is set to “yes”                | Running, enabled, synced with server                  | As expected   | CST8248 NTP %2\.PNG         |
+| Brendan     | Pass         | 11/9/2020           | wclient\.winix\.lab   | ntp\.winix\.lab                           | Yes             | NTP        | check advanced settings for “Date and Time” and check for NTP sync details and status                                 | Running and synced with server                        | As expected   | CST8248 NTP %3\.PNG         |
+| Brendan     | Pass         | 11/9/2020           | fileserve\.winix\.lab | wclient\.winix\.lab & lclient\.winix\.lab | Yes             | SMB        | run smbstatus command to verify that both clients are connected; run systemctl to verify service is running on server | Service running and both clients connected to server  | As expected   | CST8248 SMB %1\.PNG         |
+| Brendan     | Pass         | 11/9/2020           | lclient\.winix\.lab   | fileserve\.winix\.lab                     | Yes             | SMB        | run two commands to connect to server and list directories; next command to list shares on server                     | Can connect to server and list directories and shares | As expected   | CST8248 SMB %2\.PNG         |
+| Brendan     | Pass         | 11/9/2020           | wclient\.winix\.lab   | fileserve\.winix\.lab                     | Yes             | SMB        | connect to file server and show share in File Explorer window                                                         | Can connect and list contents of share directory      | As expected   | CST8248 SMB %3\.PNG         |
+| Brendan     | Pass         | 11/9/2020           | webserve\.winix\.lab  | N/A                                       | N/A             | HTTP/HTTPS | run systemctl to verify service running and netstat command to check status of ports 443 and 80                       | Running, ports 80, 443                                | As expected   | CST8248 HTTP\-HTTPs %1\.PNG |
+| Brendan     | Pass         | 11/9/2020           | lclient\.winix\.lab   | webserve\.winix\.lab                      | Yes             | HTTP/HTTPS | enter http://www\.winix\.lab in Firefox browser                                                                       | Webpage should open to default page                   | As expected   | CST8248 HTTP\-HTTPs %2\.PNG |
+| Brendan     | Pass         | 11/9/2020           | lclient\.winix\.lab   | webserve\.winix\.lab                      | Yes             | HTTP/HTTPS | enter https://secure\.winix\.lab in Firefox browser, access certificate information                                   | Webpage should open; cert should be accessible        | As expected   | CST8248 HTTP\-HTTPs %3\.PNG |
+| Brendan     | Pass         | 11/9/2020           | webserve\.winix\.lab  | N/A                                       | Yes             | HTTP/HTTPS | use two netstat commands to list all IPs connected to ports 80 and 443                                                | Both clients should appear as connected to both ports | As expected   | CST8248 HTTP\-HTTPs %4\.PNG |
+| Kolawole    | Pass         | 11/12/2020          | dc1\.winix\.lab       | N/A                                       | Yes             | AD/DNS     | nslookup                                                                                                              |                                                       |               |                             |
+| Kolawole    | Fail         | 11/12/2020          | dc2\.winix\.lab       | N/A                                       | Yes             | AD/DNS     |                                                                                                                       |                                                       |               |                             |
+| Nicholas    | Pass         | 11/13/2020          | backup\.winix\.lab    | dc1\.winix\.lab                           | yes             | DNS        | Join Domain winix\.lab                                                                                                | Join Successfully                                     | As expected   |                             |
+
+
+
+#### Appendix 3) Sample Firewall Configuration
 
 - IPTABLES RULES for fileserve.winix.lab
 
@@ -350,6 +373,10 @@ iptables -P FORWARD DROP
 
 iptables -P OUTPUT DROP
 
+
+#### Appendix 4) Network Topology
+
+******* INSERT TOPOLOGY DIAGRAM HERE ******* 
  
 
  
