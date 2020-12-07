@@ -22,61 +22,27 @@ Nicholas Hancin
 Kolawole Adamo 
 
  
+### Table of Contents 
 
-Table of Contents 
+1) Executive Summary 
 
- 
+2) Introduction 
 
- 
+3) Background 
 
-Section to be added once other parts of the document are done. Table of contents will include: 
+4) Discussion  
 
-Major Headings 
+5) Conclusion 
 
-Minor Headings 
-
-List of Figures, Tables or Charts (Unless you decide to include a Table of Figures) 
-
-Page Numbers 
- 
-
-Our document will include the following sections:
- 
-
-Title Page 
-
-Table of Contents 
-
-Executive Summary 
-
-Introduction 
-
-Background 
-
-Discussion  
-
-Conclusion 
-
-Appendices 
+6) Appendices 
 
  
 ### Executive Summary 
 
- 
-
-Executive Summary will include the following: 
-
-Short summary 
-
-Should detail the key points for decision making purposes. 
-
-Consider the purpose of your document while writing the executive summary 
-
- 
-
- 
-
- 
+This Technical Project will describe the decision making and implementation factors that resulted in the creation of the services
+delivered in this project. Overall, the main considerations used to dictate service design are service segmentation (ie. avoiding
+service stacking) and ease of maintenance. This document is intended to function as a high level description of the individual 
+services to be used to guide the client in maintaining the services when the servers are transferred to the client.
 
  
 
@@ -85,29 +51,10 @@ Consider the purpose of your document while writing the executive summary
 The project presented for your consideration includes a variety of services that are intended to provide a comprehensive set of Information Technology (IT)
 resources for an office owned by the client, Winix Labratories Inc. The services available on the network include: DNS, Samba, NTP, iSCSI, Veeam, Spiceworks,
 and some cloud services hosted in Microsoft Azure. The overall design of the deliverables and their individuals configurations are intended to optimize the 
-VMs to be easy to maintain and simple to reconfigure and alter as desired. As a result, 
-
-Intro will include the following: 
-
-Introduce the document 
-
-Describe the purpose of the document 
-
-Describe the main content 
-
-Scope of the project 
-
- 
-
- 
-
- 
-
+VMs to be easy to maintain and simple to reconfigure and alter as desired. The main content of this document will include brief summaries of the configurations and decisions that were made when setting up the individual servers.
  
 
 ### Background 
-
- 
 
 This document is intended to be read by the Computer System Technicians (CSTs) working for our client, Winix Laboratories Inc. The document will describe configuration decisions and other details that are intended to assist the CSTs with maintaining the services.  
 
