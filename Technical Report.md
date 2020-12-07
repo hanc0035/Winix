@@ -108,19 +108,6 @@ This document is intended to be read by the Computer System Technicians (CSTs) w
 
 For most of the services, individual servers are configured to perform specific tasks, such as the SMB file server on machine fileserve.winix.lab. Service stacking is limiting to the Spiceworks, DNS and Veeam services for reasons described later in this document. The use of individual systems tasked with one service is intended to minimize the complexity of server maintenance and facilitate easier backups and restores. This “modular” service design also aids in the creation of additional secondary or tertiary services as needed. Some of the critical services, such as ADDS, DNS and NTP already have secondary servers that can be used in the event of a failure on the primary systems. Supplementary information about the software and hardware configuration of the services and servers can be found in the Progress Log included in this document (refer to Appendix 1).
 
- 
-
-The Background will include: 
-
-What does the reader need to understand before exploring this document further 
-
-Who is the intended reader 
-
- 
-
- 
-
- 
 
 ### Discussion 
 
@@ -224,6 +211,8 @@ use on one of the virtual machines.
 #### Azure Portal
 
  
+ 
+### Conclusion
 
 The Conclusion will include: 
 
@@ -286,51 +275,79 @@ We probably won’t have much info to include here, so we should copy/paste our 
 - IPTABLES RULES for fileserve.winix.lab
 
 - Rules for loopback interface
+
 iptables -A INPUT -i lo -j ACCEPT
+
 iptables -A OUTPUT -o lo -j ACCEPT
 
 - Rule to permit established and related incoming connections that the server establishes
+
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
 - Rule to permit established outgoing connections
+
 iptables -A OUTPUT -m conntrack --ctstate ESTABLISHED -j ACCEPT
 
 - Rules for Samba service
+
 iptables -A INPUT -s 172.20.80.0/24 -m conntrack --ctstate NEW -p udp --dport 137 -j ACCEPT
+
 iptables -A INPUT -s 172.20.80.0/24 -m conntrack --ctstate NEW -p udp --dport 138 -j ACCEPT
+
 iptables -A INPUT -s 172.20.80.0/24 -m conntrack --ctstate NEW -p tcp --dport 139 -j ACCEPT
+
 iptables -A INPUT -s 172.20.80.0/24 -m conntrack --ctstate NEW -p tcp --dport 445 -j ACCEPT
+
 iptables -A INPUT -s 172.20.80.0/24 -m conntrack --ctstate NEW -p tcp --dport 631 -j ACCEPT
 
 - Rules for SSH service
+
 iptables -A INPUT -s 172.20.80.0/24 -m conntrack --ctstate NEW,ESTABLISHED -p tcp --dport 22 -j ACCEPT
+
 iptables -A OUTPUT -m conntrack --ctstate ESTABLISHED -p tcp --sport 22 -j ACCEPT
+
 iptables -A OUTPUT -m conntrack --ctstate NEW,ESTABLISHED -p tcp --dport 22 -j ACCEPT
+
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED -p tcp --sport 22 -j ACCEPT
 
 - Rules for HTTP and HTTPS
+
 iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
+
 iptables -A OUTPUT -p udp --dport 80 -j ACCEPT
+
 iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
+
 iptables -A OUTPUT -p udp --dport 443 -j ACCEPT
 
 - Rules for Spiceworks
+
 iptables -A INPUT -m conntrack --ctstate NEW -p tcp --dport 9675 -j ACCEPT
+
 iptables -A INPUT -m conntrack --ctstate NEW -p tcp --dport 9676 -j ACCEPT
+
 iptables -A INPUT -m conntrack --ctstate NEW -p udp --dport 9675 -j ACCEPT
+
 iptables -A INPUT -m conntrack --ctstate NEW -p udp --dport 9676 -j ACCEPT
 
 - Rules for DNS
+
 iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+
 iptables -A INPUT -p udp --sport 53 -j ACCEPT
 
 - log before dropping packet
+
 iptables -A INPUT -j LOG
+
 iptables -A INPUT -j LOG
 
 - Set all major commands to DROP by default
+
 iptables -P INPUT DROP
+
 iptables -P FORWARD DROP
+
 iptables -P OUTPUT DROP
 
  
