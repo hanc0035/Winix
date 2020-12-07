@@ -7,7 +7,7 @@
 
 ## Term Project CST8248 
 
-#### Submitted 2020-12-03 
+#### Submitted 2020-12-08
 
  
 
@@ -21,6 +21,7 @@ Nicholas Hancin
 
 Kolawole Adamo 
 
+***
  
 ### Table of Contents 
 
@@ -136,6 +137,8 @@ accessible at the following URLs on the LAN: http://http.winix.lab and https://s
 to protect connections between clients and the server. The certificate used is a self-signed certificate. This configuration decision was
 made because HTTPS will provide a considerably higher degree of security than the basic HTTP website. 
 
+******* INSERT Screenshot %1 here ********
+
 
 #### SMB
 The file server on the network utilizes the SMB protocol running on the server fileserve.winix.lab. The virtual machine operating system in
@@ -144,6 +147,8 @@ because of the ease of hardening and open source roots. The server is configured
 authentication. This design decision was made in order to maximize the simplicity and security of the service and minimize the need to have
 separate Samba login information for each user that requires access to the file server. The file share is accessible on the Blue network
 at \\\fileserve.winix.lab\WinixFiles.
+
+******* INSERT Screenshot %2 here ********
 
 
 
@@ -165,23 +170,11 @@ at \\\fileserve.winix.lab\WinixFiles.
  
 ### Conclusion
 
-The Conclusion will include: 
-
-What was learned. 
-
-Summarize document 
-
-DO NOT introduce new content here!!! 
-
-This is the end of the content/writing section. 
-
- 
-
- 
-
- 
-
- 
+Overall, this document was intended to provide a high level overview of the setup and configuration decisions that went into the final services 
+presented to the customer. The services are configured with maintenance in mind and the avoidance of service stacking should effectively help
+to ensure that the goal is achievable. The document has covered basic configuration information about the individual servers, in addition to 
+some information about decisions that were made and later reversed due to compatibility limitations or other challenges. Some of the areas where
+changes were needed include DNS implementation and challenges arising from problems with the cloud database installation in Microsoft Azure. 
 
  
 
