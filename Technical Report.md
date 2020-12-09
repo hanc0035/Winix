@@ -13,7 +13,7 @@
 
  
 
-#### Team Members: 
+### Team Members: 
 
 Brendan Marentette 
 
@@ -137,7 +137,7 @@ accessible at the following URLs on the LAN: http://http.winix.lab and https://s
 to protect connections between clients and the server. The certificate used is a self-signed certificate. This configuration decision was
 made because HTTPS will provide a considerably higher degree of security than the basic HTTP website. 
 
-******* INSERT Screenshot %1 here ********
+![Table1](https://github.com/hanc0035/Winix/blob/master/images/%251.PNG)
 
 
 #### SMB
@@ -148,7 +148,7 @@ authentication. This design decision was made in order to maximize the simplicit
 separate Samba login information for each user that requires access to the file server. The file share is accessible on the Blue network
 at \\\fileserve.winix.lab\WinixFiles.
 
-******* INSERT Screenshot %2 here ********
+![Table](https://github.com/hanc0035/Winix/blob/master/images/%252.PNG)
 
 
 
