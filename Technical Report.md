@@ -173,7 +173,7 @@ The Azure Web Server is configure through Azure's Services. It is accessible any
 
 ![Table](https://github.com/hanc0035/Winix/blob/master/images/Azure%20Webserver.png)
 
-#####PostgreSQL 
+##### PostgreSQL 
 The Azure database is running PostgreSQL. It is not currently functional as we have come into some issues with postmaster. It is to be the database that uses the webserver as its interface. To modify any settings, it is only accessible via SSH at the ip 13.90.78.8. It is currently a work in progress.
 
 ### Conclusion
