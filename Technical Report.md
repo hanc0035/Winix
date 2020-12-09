@@ -89,7 +89,6 @@ one describing the service and how it was set up (as described in the points abo
 One describing any specific config decisions we made and why (eg. Why I used MD5 authentication for NTP) 
 
  
-***
 
 #### Active Directory
 
@@ -152,9 +151,13 @@ at \\\fileserve.winix.lab\WinixFiles.
 
 
 
-#### Spiceworks
+#### Inventory
+The Inventory Server is running from the server inventory.winix.lab.  The vm is running on Windows Server 2019 and the service used is Spiceworks. The software was chosen because it was the example service for the inventory server. The OS was chosen because it is what was specified by spiceworks setup instructions. The vm uses 2 virtual socket with 2 cores and 6 GB of RAM as specified by spiceworks to run smoothly. The web client for spiceworks is running on localhost and can only be accessed by rdp to the inventory server. The inventory server logs all the systems on the winix.lab domain and log the names of the servers, the OS, and more. This server will notify the user when a system goes down.
 
+![Table](https://github.com/hanc0035/Winix/blob/master/images/spiceworks.png)
 
+#### Backup
+The Backup Server is running from the server backup.winix.lab. The vm is running from Windows Server 2019 and the service used for the backup is Veeam backup and replication. The software was chosen because it was the example service for the backup server. The OS was chosen because it was specified by Veeam backup and replication. The vm uses 2 virtual socket and 2 cores and 6 GB of RAM as specified to run smoothly. Veeam is configure to run from any server that has Veeam installed using backup.winix.lab as the backup server. It is setup to backup the http server manually but rules can be added to make the backup automatic. This server will notify the user when space is running low.
 
 #### iSCSI
  
@@ -165,9 +168,14 @@ at \\\fileserve.winix.lab\WinixFiles.
 
 
 #### Azure Portal
+##### Web Server
+The Azure Web Server is configure through Azure's Services. It is accessible anywhere at the address 104.211.0.91. It was intended to be the interface for the PostgreSQL server but due some issues with postmaster, it is currently running a placeholder website. to modify the site, you can connect via SSH.
 
- 
- 
+![Table](https://github.com/hanc0035/Winix/blob/master/images/Azure%20Webserver.png)
+
+##### PostgreSQL 
+The Azure database is running PostgreSQL. It is not currently functional as we have come into some issues with postmaster. It is to be the database that uses the webserver as its interface. To modify any settings, it is only accessible via SSH at the ip 13.90.78.8. It is currently a work in progress.
+
 ### Conclusion
 
 Overall, this document was intended to provide a high level overview of the setup and configuration decisions that went into the final services 
