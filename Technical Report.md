@@ -168,7 +168,7 @@ The Backup Server is running from the server backup.winix.lab. The vm is running
 
 
 #### Azure Portal
-#####Web Server
+##### Web Server
 The Azure Web Server is configure through Azure's Services. It is accessible anywhere at the address 104.211.0.91. It was intended to be the interface for the PostgreSQL server but due some issues with postmaster, it is currently running a placeholder website. to modify the site, you can connect via SSH.
 
 ![Table](https://github.com/hanc0035/Winix/blob/master/images/Azure%20Webserver.png)
