@@ -220,7 +220,7 @@ We probably won’t have much info to include here, so we should copy/paste our 
 | inventory\.winix\.lab | Complete    | Complete    | 11/5/2020            | 11/30/2020         | Nicholas                  | windows Server 2016 | Spiceworks/Inventory                                          | 2           | 2                    | 4           | 6          |                  | 172\.20\.80\.14  | researched/not configured                                                      |
 | sql\.winix\.lab       | In Progress | Not Started | 11/11/2020           | 11/30/2020         | Nicholas                  | Ubuntu 18           | Azure SQL                                                     | 0           | 0                    | 0           | 0          |                  | 172\.20\.80\.37  | public ip 13\.90\.78\.8 \(for ssh connection\)                                 |
 | azure webserver       | Complete    | Complete    | 11/11/2020           | 11/30/2020         | Nicholas                  | Ubuntu 18           | Azure Web Server                                              | 0           | 0                    | 0           | 0          |                  | 172\.20\.80\.36  | public ip 104\.211\.0\.91 \(for ssh connection\)    
-| wac\.winix\.lab       | Complete    | In Progress | 11/11/2020           | 11/30/2020         | Kolawola                  | Windows Server 2019 | Windows Admin Center                                          | 1           | 2                    | 2           | 2          |                  | 172\.20\.80\.?   |
+| wac\.winix\.lab       | Complete    | In Progress | 11/11/2020           | 11/30/2020         | Kolawola                  | Windows Server 2019 | Windows Admin Center                                          |             |                      |0           |            |                  | 172\.20\.80\.15   |
 
 #### Appendix 2) Testing Plan Sample
 
@@ -327,12 +327,7 @@ iptables -P OUTPUT DROP
 
 #### Appendix 4) Network Topology
 
-******* INSERT TOPOLOGY DIAGRAM HERE ******* 
- 
-
- 
-
- 
+![Table](https://github.com/hanc0035/Winix/blob/master/images/UpdatedWinixTopology.png)
 
 ### References 
 
