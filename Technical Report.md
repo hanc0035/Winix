@@ -153,7 +153,9 @@ at \\\fileserve.winix.lab\WinixFiles.
 
 
 #### Spiceworks
+The Inventory Server is running from the server inventory.winix.lab.  The vm is running on Windows Server 2019 and the service used is Spiceworks. The software was chosen because it was the example service for the inventory server. The OS was chosen because it is what was specified by spiceworks setup instructions. The vm uses 1 virtual socket with 2 cores and 6 GB of RAM as specified by spiceworks to run smoothly. The web client for spiceworks is running on localhost and can only be accessed by rdp to the inventory server. The inventory server logs all the systems on the winix.lab domain and log the names of the servers, the OS, and more. This server will notify the user when a system goes down.
 
+![Table](https://github.com/hanc0035/Winix/blob/master/images/spiceworks.png)
 
 
 #### iSCSI
