@@ -170,15 +170,15 @@ iSCSI initiator and iSCSI target both connected
 #### Windows Admin Centre
 This is a locally deployed running from the server wac.winix.lab. A browser-based application for managing windows servers, clusters, infrastructures. In this project, we have used the WAC for other windows server management. Instead of opening the various tools on each of those server operating windows servers. We can now use the windows admin server, which is also considered a lightweight management system for small to large scale deployments. There are familiar MMC tools functionalities.
 
-<Here you can view and add connections to the windows admin center>
- ###images
+![Table](https://github.com/hanc0035/Winix/blob/master/images/wac1.png)
  
-<Here you can view, edit, add files and folder, download, uploads, add group policies, view performances of servers from the use of the management tools>
-###images
+![Table](https://github.com/hanc0035/Winix/blob/master/images/wac2.png)
 
 Instead of remoting into a server via RDP or other inbox tools, you can manage servers remotely from the browser using the windows admin center.
-<Remote access to the inventory server from the Windows server Admin enviroment and other servers>
-###images
+
+![Table](https://github.com/hanc0035/Winix/blob/master/images/wac3.png)
+
+![Table](https://github.com/hanc0035/Winix/blob/master/images/wac4.png)
  
 There are remote server administration tools for managing servers' roles and features. The windows admin center installs and runs services such as DNS, Active Directory, ISCSI initiator, and ISCSI Target as done in this project. And using one server for each of these services and having a secondary domain controller was the best practice to implement. Just in case one service or a breakdown of the server occurs, it does not affect all services, and if the master domain controller is down, the secondary is there for backup. Overall the admin center oversees the configurations of all servers within its environment.
 
@@ -232,13 +232,13 @@ We probably won’t have much info to include here, so we should copy/paste our 
 | ntp2\.winix\.lab      | Complete    | Complete    | 11/8/2020            | 11/15/2020         | Brendan                   | CentOS 7            | Secondary NTP Server                                          | 1           | 2                    | 2           | 2          | 172\.30\.80\.8   | 172\.20\.80\.8   |                                                                                |
 | dc01\.winix\.lab      | Complete    | Complete    | 10/19/2020           | 11/15/2020         | Kolawole                  | Windows Server 2019 | Master Windows Admin Center \(WAC\) & AD Domain Controller    | 2           | 2                    | 4           | 8          | 172\.30\.80\.6   | 172\.20\.80\.6   |                                                                                |
 | dc02\.winix\.lab      | Complete    | Complete    | 10/19/2020           | 11/15/2020         | Kolawole                  | Windows Server 2019 | Secondary Windows Admin Center \(WAC\) & AD Domain Controller | 2           | 2                    | 4           | 8          | 172\.30\.80\.7   | 172\.20\.80\.7   | Slave DNS server                                                               |
-| target\.winix\.lab    | Complete    | Complete    | 10/30/2020           | 11/20/2020         | Kolawole                  | Windows Server 2019 | iSCSI Target                                                  |             |                      | 0           |            |                  | 172\.20\.80\.11  |                                                                                |
-| init\.winix\.lab      | Complete    | Complete    | 11/2/2020            | 11/20/2020         | Kolawole                  | Windows Server 2019 | iSCSI Initiator                                               |             |                      | 0           |            |                  | 172\.20\.80\.12  |                                                                                |
+| target\.winix\.lab    | Complete    | Complete    | 10/30/2020           | 11/20/2020         | Kolawole                  | Windows Server 2019 | iSCSI Target                                                  | 2           | 2                    | 4         | 6           |                  | 172\.20\.80\.11  |                                                                                |
+| init\.winix\.lab      | Complete    | Complete    | 11/2/2020            | 11/20/2020         | Kolawole                  | Windows Server 2019 | iSCSI Initiator                                               | 1            |  2                    | 2           | 8           |                  | 172\.20\.80\.12  |                                                                                |
 | backup\.winix\.lab    | Complete    | Complete    | 11/5/2020            | 11/30/2020         | Nicholas                  | windows Server 2019 | Veeam Backup                                                  | 2           | 2                    | 4           | 6          |                  | 172\.20\.80\.13  | researched/not configured                                                      |
 | inventory\.winix\.lab | Complete    | Complete    | 11/5/2020            | 11/30/2020         | Nicholas                  | windows Server 2016 | Spiceworks/Inventory                                          | 2           | 2                    | 4           | 6          |                  | 172\.20\.80\.14  | researched/not configured                                                      |
 | sql\.winix\.lab       | In Progress | Not Started | 11/11/2020           | 11/30/2020         | Nicholas                  | Ubuntu 18           | Azure SQL                                                     | 0           | 0                    | 0           | 0          |                  | 172\.20\.80\.37  | public ip 13\.90\.78\.8 \(for ssh connection\)                                 |
 | azure webserver       | Complete    | Complete    | 11/11/2020           | 11/30/2020         | Nicholas                  | Ubuntu 18           | Azure Web Server                                              | 0           | 0                    | 0           | 0          |                  | 172\.20\.80\.36  | public ip 104\.211\.0\.91 \(for ssh connection\)    
-| wac\.winix\.lab       | Complete    | In Progress | 11/11/2020           | 11/30/2020         | Kolawola                  | Windows Server 2019 | Windows Admin Center                                          |             |                      |0           |            |                  | 172\.20\.80\.15   |
+| wac\.winix\.lab       | Complete    | In Progress | 11/11/2020           | 11/30/2020         | Kolawola                  | Windows Server 2019 | Windows Admin Center                                          | 4            | 2                     |8           | 6           |                  | 172\.20\.80\.15   |
 
 #### Appendix 2) Testing Plan Sample
 
