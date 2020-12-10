@@ -93,7 +93,7 @@ One describing any specific config decisions we made and why (eg. Why I used MD5
 #### Active Directory
 The active directory is essential for businesses to work. A service where you can implement security, permissions in a windows environment which act as a single sign-up with access to resources.
 The Active Directory is the domain controller that stores all information of the users and computers account in the domain controller. So, for each of the servers used to manage different services they are added to the domain controller, and a secondary domain controller is advised to be configured, in support for the master DC. If down the second act in support for continuity of service. The operating system used is the Windows server 2019 and, this service was chosen, because of how it can handle a small to a large number of users and computers. In the Active Directory server the DNS is installed to be able to maps IP addresses to a fully qualified domain name (FQDN), and using the inbuilt DNS services is much simpler to use, which saves time to configure. These services are configured to manage a small environment but if in a large environment the active directory and the DNS services would be on a separate server for easy use and access depending on the hardware specification.
-##<image>##
+<image>
 
 
 #### DNS
@@ -165,7 +165,7 @@ The Backup Server is running from the server backup.winix.lab. The vm is running
 The ISCSI which uses an IP address connected to the blue network is used to transfers data between the initiator on a server and to the target on another server for storage on a device. This will provide high availability between server and server and it is configured to be scalable and maximize storage.
 
 iSCSI initiator and iSCSI target both connected
-###images
+<images>
  
 
 
