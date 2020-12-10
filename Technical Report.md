@@ -332,3 +332,9 @@ iptables -P OUTPUT DROP
 [9]"Create, change, or delete an Azure network security group", Docs.microsoft.com. [Online]. Available: https://docs.microsoft.com/en-us/azure/virtual-network/manage-network-security-group. [Accessed: 10- Dec- 2020].
 
 [10]"PostgreSQL and NodeJS", Mherman.org. [Online]. Available: https://mherman.org/blog/postgresql-and-nodejs/. [Accessed: 10- Dec- 2020].
+
+[11]"What is Windows Admin Center", Docs.microsoft.com. [Online]. Available: https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/understand/what-is. [Accessed: 10- Dec- 2020].
+
+[12]C. Taylor, "What Is iSCSI and How Does It Work?", Enterprisestorageforum.com. [Online]. Available: https://www.enterprisestorageforum.com/storage-hardware/iscsi.html. [Accessed: 10- Dec- 2020].
+
+[13]"Install Active Directory Domain Services (Level 100)", Docs.microsoft.com. [Online]. Available: https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_GUI. [Accessed: 10- Dec- 2020].
