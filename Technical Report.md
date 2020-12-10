@@ -161,6 +161,7 @@ The Backup Server is running from the server backup.winix.lab. The vm is running
 
 #### iSCSI
 The ISCSI which uses an IP address connected to the blue network is used to transfers data between the initiator on a server and to the target on another server for storage on a device. This will provide high availability between server and server and it is configured to be scalable and maximize storage.
+
 ![Table](https://github.com/hanc0035/Winix/blob/master/images/iscsi.png)
  
 
