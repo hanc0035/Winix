@@ -161,7 +161,9 @@ The Backup Server is running from the server backup.winix.lab. The vm is running
 
 #### iSCSI
 The ISCSI which uses an IP address connected to the blue network is used to transfers data between the initiator on a server and to the target on another server for storage on a device. This will provide high availability between server and server and it is configured to be scalable and maximize storage.
-<iSCSI initiator and iSCSI target both connected  >
+
+iSCSI initiator and iSCSI target both connected
+###images
  
 
 
@@ -169,12 +171,15 @@ The ISCSI which uses an IP address connected to the blue network is used to tran
 This is a locally deployed running from the server wac.winix.lab. A browser-based application for managing windows servers, clusters, infrastructures. In this project, we have used the WAC for other windows server management. Instead of opening the various tools on each of those server operating windows servers. We can now use the windows admin server, which is also considered a lightweight management system for small to large scale deployments. There are familiar MMC tools functionalities.
 
 <Here you can view and add connections to the windows admin center>
+ ###images
  
 <Here you can view, edit, add files and folder, download, uploads, add group policies, view performances of servers from the use of the management tools>
+###images
 
 Instead of remoting into a server via RDP or other inbox tools, you can manage servers remotely from the browser using the windows admin center.
 <Remote access to the inventory server from the Windows server Admin enviroment and other servers>
-
+###images
+ 
 There are remote server administration tools for managing servers' roles and features. The windows admin center installs and runs services such as DNS, Active Directory, ISCSI initiator, and ISCSI Target as done in this project. And using one server for each of these services and having a secondary domain controller was the best practice to implement. Just in case one service or a breakdown of the server occurs, it does not affect all services, and if the master domain controller is down, the secondary is there for backup. Overall the admin center oversees the configurations of all servers within its environment.
 
 
