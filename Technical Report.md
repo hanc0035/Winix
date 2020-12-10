@@ -7,7 +7,7 @@
 
 ## Term Project CST8248 
 
-#### Submitted 2020-12-08
+#### Submitted 2020-12-10
 
  
 
@@ -63,32 +63,6 @@ For most of the services, individual servers are configured to perform specific 
 
 
 ### Discussion 
-
-The Discussion is expected to include the following: 
-
-Main body of your document.   
-
-Which services and platforms & why. 
-
-Which networks and IP addresses & why 
-
-Are there limitations/ non-functioning equipment. 
-
-What maintenance/Daily Duties  
-
-What are your thoughts on the matter. 
-
-Why does your reader care. 
-
- 
-
-In this section, we should include 1 page per service that we’ve set up. The page should consist of at least two paragraphs: 
-
-one describing the service and how it was set up (as described in the points above).  
-
-One describing any specific config decisions we made and why (eg. Why I used MD5 authentication for NTP) 
-
- 
 
 #### Active Directory
 The active directory is essential for businesses to work. A service where you can implement security, permissions in a windows environment which act as a single sign-up with access to resources.
@@ -207,18 +181,6 @@ changes were needed include DNS implementation and challenges arising from probl
  
 
 ### Appendices 
-
- 
-
-The Appendices can include the following: 
-
-Stuff that does not fit in the body of the document 
-
-Config files go well here 
-
-Unresolved troubleshooting  
-
-We probably won’t have much info to include here, so we should copy/paste our config files here so that we have enough content. We will also include our test plan in the appendices. 
 
 #### Appendix 1) Progress Log
 
@@ -351,8 +313,22 @@ iptables -P OUTPUT DROP
 
 ### References 
 
- 
+[1]I. Spiceworks, "SpiceWorks Install onto a VM with vSphere Beginning to End", Community.spiceworks.com, 2015. [Online]. Available: https://community.spiceworks.com/how_to/123190-spiceworks-install-onto-a-vm-with-vsphere-beginning-to-end. [Accessed: 10- Dec- 2020].
 
-Please copy/paste the links to any sites/sources you used. Brendan can convert the links and ISBNs into formatted IEEE references. 
+[2]"Step 1. Start Setup Wizard - Veeam Backup Guide for Hyper-V", Veeam Software Help Center, 2015. [Online]. Available: https://helpcenter.veeam.com/docs/backup/hyperv/install_vbr_launch.html?ver=100. [Accessed: 10- Dec- 2020].
 
- 
+[3]"Manage resource groups - Azure portal - Azure Resource Manager", Docs.microsoft.com. [Online]. Available: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups. [Accessed: 10- Dec- 2020].
+
+[4]"Create a virtual network - quickstart - Azure portal - Azure Virtual Network", Docs.microsoft.com. [Online]. Available: https://docs.microsoft.com/en-us/azure/virtual-network/quick-create-portal. [Accessed: 10- Dec- 2020].
+
+[5]"Add, change, or delete an Azure virtual network subnet", Docs.microsoft.com. [Online]. Available: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-subnet. [Accessed: 10- Dec- 2020].
+
+[6]"Quickstart - Create a Linux VM in the Azure portal - Azure Virtual Machines", Docs.microsoft.com. [Online]. Available: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal. [Accessed: 10- Dec- 2020].
+
+[7]"Quickstart - Create a Linux VM in the Azure portal - Azure Virtual Machines", Docs.microsoft.com. [Online]. Available: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal. [Accessed: 10- Dec- 2020].
+
+[8]"Set up PostgreSQL on a Linux VM - Azure Virtual Machines", Docs.microsoft.com. [Online]. Available: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/postgresql-install. [Accessed: 10- Dec- 2020].
+
+[9]"Create, change, or delete an Azure network security group", Docs.microsoft.com. [Online]. Available: https://docs.microsoft.com/en-us/azure/virtual-network/manage-network-security-group. [Accessed: 10- Dec- 2020].
+
+[10]"PostgreSQL and NodeJS", Mherman.org. [Online]. Available: https://mherman.org/blog/postgresql-and-nodejs/. [Accessed: 10- Dec- 2020].
